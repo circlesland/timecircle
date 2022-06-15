@@ -49,8 +49,12 @@ function getCrcPayoutAt(timestamp:number) : number {
  * @param amount The CRC value of the transaction
  * @return The TC value of the transaction
  */
-export function crcToTc(timestamp:Date, amount:number) : number {
-  const payoutAtTimestamp = getCrcPayoutAt(timestamp.getTime());
+export function crcToTc(timestamp:Date|number, amount:number) : number {
+  const ts = timestamp instanceof Date
+    ? timestamp.getTime()
+    : timestamp;
+
+  const payoutAtTimestamp = getCrcPayoutAt(ts);
   return amount / payoutAtTimestamp * 24;
 }
 
@@ -60,7 +64,11 @@ export function crcToTc(timestamp:Date, amount:number) : number {
  * @param amount The TC value of the transaction
  * @returns The CRC value of the transaction
  */
-export function tcToCrc(timestamp:Date, amount:number) : number {
-  const payoutAtTimestamp = getCrcPayoutAt(timestamp.getTime());
+export function tcToCrc(timestamp:Date|number, amount:number) : number {
+  const ts = timestamp instanceof Date
+    ? timestamp.getTime()
+    : timestamp;
+
+  const payoutAtTimestamp = getCrcPayoutAt(ts);
   return amount / 24 * payoutAtTimestamp;
 }
