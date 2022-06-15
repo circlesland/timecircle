@@ -1,5 +1,5 @@
 {
-  "name": "timecircle",
+  "name": "@jaensen/timecircles",
   "version": "1.0.0",
   "description": "Time Circles (TC) are a time-dependent display unit for Circles (CRC). This repo contains functions to convert between CRC and TC.",
   "main": "index.js",
