@@ -3,10 +3,9 @@
     "target": "ES2015",
     "module": "ES2015",
     "lib": ["es2015"],
-    "declaration": true,
-    "declarationDir": "./dist/typings/",
-    "outDir": "./dist/esm/"
+    "declaration": true
   },
-  "files": ["./src/index.ts"],
-  "include": ["./src/**/*.ts"]
+  "files": [
+    "./index.ts"
+  ]
 }

@@ -8,11 +8,6 @@ const oneDayInMilliSeconds = 86400 * 1000;
  */
 const oneCirclesYearInDays = 365.25;
 const oneCirclesYearInMilliSeconds = oneCirclesYearInDays * 24 * 60 * 60 * 1000;
-
-/**
- * Calculates the CRC payout for a given point in time.
- * @return {number}
- */
 function getCrcPayoutAt(timestamp) {
     // How many days passed between the circles inception and the transaction?
     const daysSinceCirclesInception = (timestamp - circlesInceptionTimestamp) / oneDayInMilliSeconds;
