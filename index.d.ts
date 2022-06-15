@@ -4,11 +4,11 @@
  * @param amount The CRC value of the transaction
  * @return The TC value of the transaction
  */
-export declare function CrcToTc(timestamp: Date, amount: number): number;
+export declare function crcToTc(timestamp: Date, amount: number): number;
 /**
  * Converts a TC amount to a CRC amount.
  * @param timestamp The point in time when the TC transaction happened
  * @param amount The TC value of the transaction
  * @returns The CRC value of the transaction
  */
-export declare function TcToCrc(timestamp: Date, amount: number): number;
+export declare function tcToCrc(timestamp: Date, amount: number): number;
