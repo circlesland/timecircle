@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "module": "ES2015",
+    "module": "CommonJS",
     "lib": ["es2015"],
-    "declaration": true
+    "declaration": true,
+    "sourceRoot": "src",
+    "sourceMap": true,
+    "outDir": "dist"
   },
   "files": [
-    "./index.ts"
+    "./src/index.ts"
   ]
 }

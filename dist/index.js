@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.tcToCrc = exports.crcToTc = void 0;
 /**
  * The point in time when the Circles Hub contract was deployed.
  */
@@ -42,17 +45,20 @@ function getCrcPayoutAt(timestamp) {
  * @param amount The CRC value of the transaction
  * @return The TC value of the transaction
  */
-export function crcToTc(timestamp, amount) {
+function crcToTc(timestamp, amount) {
     const payoutAtTimestamp = getCrcPayoutAt(timestamp.getTime());
     return amount / payoutAtTimestamp * 24;
 }
+exports.crcToTc = crcToTc;
 /**
  * Converts a TC amount to a CRC amount.
  * @param timestamp The point in time when the TC transaction happened
  * @param amount The TC value of the transaction
  * @returns The CRC value of the transaction
  */
-export function tcToCrc(timestamp, amount) {
+function tcToCrc(timestamp, amount) {
     const payoutAtTimestamp = getCrcPayoutAt(timestamp.getTime());
     return amount / 24 * payoutAtTimestamp;
 }
+exports.tcToCrc = tcToCrc;
+//# sourceMappingURL=index.js.map
